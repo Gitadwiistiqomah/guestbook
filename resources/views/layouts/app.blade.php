@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="{{ asset('/vendors/perfect-scrollbar/perfect-scrollbar.css') }}">
     <link rel="stylesheet" href="{{ asset('/vendors/bootstrap-icons/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+
     <link rel="shortcut icon" href="{{ asset('/images/favicon.svg') }}" type="image/x-icon">
+
+    @stack('styles')
 </head>
 
 <body>
@@ -30,12 +33,13 @@
             </div>
         </div>
     </div>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ asset('/vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
     
+    @stack('scripts')
+
     <script src="{{ asset('/js/mazer.js') }}"></script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      @stack('scripts')
 </html>
